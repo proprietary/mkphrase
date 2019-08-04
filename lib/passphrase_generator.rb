@@ -29,7 +29,8 @@ OptionParser.new do |option|
             'How long you want your passphrase to be') do |o|
     options.num_words = o
   end
-  options.wordlist_path ||= File.absolute_path('wordlists/english.txt')
+  options.wordlist_path ||= File.join(File.dirname(__FILE__),
+                                      '../wordlists/english.txt')
 end.parse!
 
 WORDLIST = Wordlist.new options.wordlist_path

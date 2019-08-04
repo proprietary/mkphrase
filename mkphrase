@@ -1,1 +1,3 @@
-lib/passphrase_generator.rb
+#!/bin/sh
+
+exec ruby ./lib/passphrase_generator.rb "$@"
